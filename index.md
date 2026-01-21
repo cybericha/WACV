@@ -25,12 +25,12 @@ description: Promoting Discriminative and Generative Methods for Dynamic Scene U
 ---
 
 <div class="container">
-  <img class="rounded-rect" src="assets/imgs/nuplan_occ/fig_01.png" alt="NuPlan-Occ overview figure"/>
+  <img class="rounded-rect" src="assets/imgs/nuplan_occ/fig_01.PNG" alt="NuPlan-Occ overview figure"/>
 </div>
 {: .text-center}
 
 <div class="container">
-  <img class="rounded-rect" src="assets/imgs/nuplan_occ/fig_02.png" alt="OpenScene vs NuPlan-Occ comparison"/>
+  <img class="rounded-rect" src="assets/imgs/nuplan_occ/fig_02.PNG" alt="OpenScene vs NuPlan-Occ comparison"/>
 </div>
 {: .text-center}
 
@@ -74,7 +74,7 @@ This challenge introduces **NuPlan-Occ**, the largest publicly available semanti
 We invite researchers to develop and submit models for 3D semantic occupancy prediction, with the goal of advancing state-of-the-art performance in accuracy, scalability, and generalization.
 
 <div class="container">
-  <img class="rounded-rect" src="assets/imgs/nuplan_occ/fig_03.png" alt="Dataset comparison table"/>
+  <img class="rounded-rect" src="assets/imgs/nuplan_occ/fig_03.PNG" alt="Dataset comparison table"/>
 </div>
 {: .text-center}
 
@@ -110,7 +110,7 @@ The occupancy grid is defined over a predefined spatial volume with semantic cla
 - Paper & Dataset Curation: https://arxiv.org/abs/2510.22973
 
 <div class="container">
-  <img class="rounded-rect" src="assets/imgs/nuplan_occ/fig_04.png" alt="Dense reconstruction and labeling pipeline"/>
+  <img class="rounded-rect" src="assets/imgs/nuplan_occ/fig_04.PNG" alt="Dense reconstruction and labeling pipeline"/>
 </div>
 {: .text-center}
 
