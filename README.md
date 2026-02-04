@@ -4,6 +4,17 @@
 
 *Cayman is a Jekyll theme for GitHub Pages. You can [preview the theme to see what it looks like](http://pages-themes.github.io/cayman), or even [use it today](#usage).*
 
+## 🚀 Deploying to GitHub Pages / 部署到 GitHub Pages
+
+This repository includes automated GitHub Pages deployment. See [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md) for detailed instructions.
+
+**Quick Setup:**
+1. Go to Settings > Pages
+2. Set Source to "GitHub Actions"
+3. Push to `main` branch or manually trigger the workflow
+
+Your site will be available at: `https://cybericha.github.io/WACV/`
+
 ![Thumbnail of Cayman](thumbnail.png)
 
 ## Usage
