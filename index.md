@@ -8,8 +8,7 @@ description: Challenge SOTA E2E AD models by curating adversarial driving scenes
 [<img class="rounded-rect" src="assets/imgs/wacv2026.png" width="420px" alt="WACV 2026"/>](https://wacv2026.thecvf.com)
 {: .text-center}
 
-[cite_start]**Workshop / Challenge Info:** _TBA (date, venue, online link)_ [cite: 1]
-{: .text-center}
+[cite_start]**Workshop / Challenge Info:**
 
 <div class="container">
   <img class="rounded-rect" src="assets/imgs/AD0.jpg" alt="NuPlan-Occ overview figure"/>
@@ -20,23 +19,6 @@ description: Challenge SOTA E2E AD models by curating adversarial driving scenes
 ## :page_facing_up: **Paper** {#paper}
 
 - [cite_start]**Reference Paper (arXiv)**: [Challenger: Affordable adversarial driving video generation](https://arxiv.org/abs/2505.15880) [cite: 37, 38, 40]
-
----
-
-## :newspaper: **News** {#news}
-
-- **TBA ---** :tada: Website is live!
-- [cite_start]**TBA ---** :package: [TBD] abstract driving scenes from nuScenes dataset release. [cite: 15]
-- **TBA ---** :bar_chart: Evaluation server / leaderboard opens.
-
----
-
-## :hourglass_flowing_sand: **Important Dates** {#dates}
-
-- **TBA ---** Challenge **Opens**
-- **TBA ---** Challenge Submission **Closes**
-- **TBA ---** Winner Notification
-- **TBA ---** Workshop @ **TopoCoT 2026**
 
 ---
 
