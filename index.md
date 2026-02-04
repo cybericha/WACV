@@ -30,28 +30,6 @@ description: Promoting Discriminative and Generative Methods for Dynamic Scene U
 - **Paper & Dataset Curation (arXiv)**: https://arxiv.org/abs/2510.22973
 - **Project / Code (UniScene v2)**: https://github.com/Arlo0o/UniScene-Unified-Occupancy-centric-Driving-Scene-Generation/tree/v2
 
-## :tv: **Video** {#video}
-
-#### Coming soon...
-
----
-
-## :newspaper: **News** {#news}
-
-- **TBA ---** :tada: Website is live!
-- **TBA ---** :package: NuPlan-Occ dataset release & baseline code available.
-- **TBA ---** :bar_chart: Evaluation server / leaderboard opens.
-
----
-
-## :hourglass_flowing_sand: **Important Dates** {#dates}
-
-- **TBA ---** Challenge **Opens** (Dev / Validation)
-- **TBA ---** Challenge **Opens** (Final / Test)
-- **TBA ---** Challenge Submission **Closes**
-- **TBA ---** Winner Notification
-- **TBA ---** Workshop @ **WACV 2026**
-
 ---
 
 ## 📌 **Overview** {#overview}
