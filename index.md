@@ -1,34 +1,30 @@
 ---
 layout: default
-title: Large-scale 3D Semantic Occupancy Prediction on NuPlan-Occ for Autonomous Driving @ WACV 2026
-description: Promoting Discriminative and Generative Methods for Dynamic Scene Understanding
+title: Adversarial Driving Scene Generation Challenge @ TopoCoT Workshop 2026WACV
+description: Challenge SOTA E2E AD models by curating adversarial driving scenes
 ---
 
-:wave: Welcome to the **Large-scale 3D Semantic Occupancy Prediction Challenge** organized at :wave:
-[<img class="rounded-rect" src="assets/imgs/wacv2026.png" width="420px" alt="WACV 2026"/>](https://wacv2026.thecvf.com)
+:wave: Welcome to the **Adversarial Driving Scene Generation Challenge** organized at :wave:
+[<img class="rounded-rect" src="assets/imgs/topo_cot.png" width="420px" alt="TopoCoT Workshop"/>](https://example.com) 
+*(Note: 1st Workshop on Robust and Generalized Lane Topology Understanding and HD Map Generation through CoT Design)*
 {: .text-center}
 
-**WACV 2026 Workshop / Challenge Info:** _TBA (date, venue, online link)_
+[cite_start]**Workshop / Challenge Info:** _TBA (date, venue, online link)_ [cite: 1]
 {: .text-center}
 
 ---
 
 <div class="container">
-  <img class="rounded-rect" src="assets/imgs/nuplan_occ/fig_01.PNG" alt="NuPlan-Occ overview figure"/>
+  <img class="rounded-rect" src="assets/imgs/adversarial_overview.PNG" alt="Adversarial scenarios and performance degradation"/>
 </div>
 {: .text-center}
-
-<div class="container">
-  <img class="rounded-rect" src="assets/imgs/nuplan_occ/fig_02.PNG" alt="OpenScene vs NuPlan-Occ comparison"/>
-</div>
-{: .text-center}
+[cite_start]*Photorealistic adversarial driving scenarios and observed performance degradation in terms of collision rate. [cite: 2]*
 
 ---
 
 ## :page_facing_up: **Paper** {#paper}
 
-- **Paper & Dataset Curation (arXiv)**: https://arxiv.org/abs/2510.22973
-- **Project / Code (UniScene v2)**: https://github.com/Arlo0o/UniScene-Unified-Occupancy-centric-Driving-Scene-Generation/tree/v2
+- [cite_start]**Reference Paper (arXiv)**: [Challenger: Affordable adversarial driving video generation](https://arxiv.org/abs/2505.15880) [cite: 37, 38, 40]
 
 ## :tv: **Video** {#video}
 
@@ -39,133 +35,87 @@ description: Promoting Discriminative and Generative Methods for Dynamic Scene U
 ## :newspaper: **News** {#news}
 
 - **TBA ---** :tada: Website is live!
-- **TBA ---** :package: NuPlan-Occ dataset release & baseline code available.
+- [cite_start]**TBA ---** :package: [TBD] abstract driving scenes from nuScenes dataset release. [cite: 15]
 - **TBA ---** :bar_chart: Evaluation server / leaderboard opens.
 
 ---
 
 ## :hourglass_flowing_sand: **Important Dates** {#dates}
 
-- **TBA ---** Challenge **Opens** (Dev / Validation)
-- **TBA ---** Challenge **Opens** (Final / Test)
+- **TBA ---** Challenge **Opens**
 - **TBA ---** Challenge Submission **Closes**
 - **TBA ---** Winner Notification
-- **TBA ---** Workshop @ **WACV 2026**
+- **TBA ---** Workshop @ **TopoCoT 2026**
 
 ---
 
 ## 📌 **Overview** {#overview}
 
-Semantic occupancy prediction is a cornerstone of 3D scene understanding in autonomous driving, providing dense, voxel-level semantic and geometric representations of dynamic environments. Despite recent advances, large-scale, high-resolution occupancy datasets remain scarce, limiting the development and evaluation of robust models.
+[cite_start]While autonomous driving systems have made remarkable progress, they remain fragile in **"corner cases"**—rare, unexpected, or aggressive scenarios that often lead to safety-critical failures. [cite: 4] [cite_start]Ensuring robustness in these conditions is currently a major bottleneck for real-world deployment. [cite: 5]
 
-This challenge introduces **NuPlan-Occ**, the largest publicly available semantic occupancy dataset to date, featuring **3.6 million frames** with high-resolution voxel annotations (**400 × 400 × 32**). Derived from the widely adopted NuPlan benchmark, NuPlan-Occ enables scalable training and evaluation of both discriminative and generative models for 3D scene understanding.
-
-We invite researchers to develop and submit models for 3D semantic occupancy prediction, with the goal of advancing state-of-the-art performance in accuracy, scalability, and generalization.
-
-<div class="container">
-  <img class="rounded-rect" src="assets/imgs/nuplan_occ/fig_03.PNG" alt="Dataset comparison table"/>
-</div>
-{: .text-center}
+[cite_start]Current benchmarks lack the ability to systematically stress-test **End-to-End (E2E)** driving models against these edge cases. [cite: 6] [cite_start]This competition addresses that gap by focusing on **Adversarial Driving Scene Generation**. [cite: 7] [cite_start]Success is measured by your ability to induce failures in state-of-the-art E2E driving models while maintaining plausibility. [cite: 10]
 
 ---
 
 ## 🎯 **Task** {#task}
 
-Participants are tasked with predicting **3D semantic occupancy grids** from **multi-view camera images**.
+[cite_start]Your mission is to generate **adversarial driving scenarios** that induce failures in SOTA E2E autonomous driving models. [cite: 12] [cite_start]You will achieve this by subtly modifying real-world scenes to create difficult but physically plausible "corner cases". [cite: 13]
 
-The occupancy grid is defined over a predefined spatial volume with 9 semantic classes including:
+**The Process:**
+* [cite_start]**Input Data**: You will use abstract driving scenes originated from the **nuScenes** dataset. [cite: 15]
+* [cite_start]**Trajectory Manipulation**: You are allowed to manipulate the trajectory of **exactly one** background vehicle (the "adversarial agent"). [cite: 16]
+* [cite_start]**Objective**: Create an aggressive or unexpected interaction with the autonomous ego vehicle. [cite: 17]
 
-`vehicle, pedestrian, bicycle, traffic_cone, barrier, czone_sign, generic_object, background, empty`
-
-**Two tracks are supported:**
-- **Discriminative Track:** Predict occupancy from input images.
-- **Generative Track:** Forecast occupancy sequences or complete partial scenes.
-
----
-
-## 📊 **Dataset: NuPlan-Occ** {#dataset}
-
-- **Source:** Built from the NuPlan dataset, with dense 3D semantic annotations.
-- **Scale:** 19K scenes, 3.6M frames.
-- **Resolution:** (400 × 400 × 32) voxels.
-- **Annotations:** 10 semantic classes, with foreground/background separation.
-- **Modalities:** Multi-view RGB images, LiDAR point clouds, BEV maps, and semantic occupancy grids.
-
-### Access
-- HuggingFace: https://huggingface.co/datasets/Arlolo0/Nuplan-Occupancy  
-- GitHub: https://github.com/Arlo0o/UniScene-Unified-Occupancy-centric-Driving-Scene-Generation/tree/v2  
-- Paper & Dataset Curation: https://arxiv.org/abs/2510.22973
-
-<div class="container">
-  <img class="rounded-rect" src="assets/imgs/nuplan_occ/fig_04.PNG" alt="Dense reconstruction and labeling pipeline"/>
-</div>
-{: .text-center}
+**Strict Constraints:**
+* [cite_start]**Minimum Safety Distance**: The adversarial vehicle must never approach within [TBD] meters (no ramming). [cite: 19, 21]
+* [cite_start]**No Background Collisions**: Must not collide with other background traffic. [cite: 22]
+* [cite_start]**Drivable Area**: Must remain within road boundaries at all times. [cite: 23, 24]
 
 ---
 
 ## ⚙️ **Evaluation** {#evaluation}
 
-**Primary Metric:** mean Intersection-over-Union (**mIoU**) across all semantic classes.
+[cite_start]Submissions are evaluated through a three-stage pipeline to ensure realism and effectiveness: [cite: 26]
 
-**Secondary Metrics:**
-- Per-class IoU
-- Precision & Recall
+1.  [cite_start]**Kinematic Rectification**: Ensures the trajectory is smooth and physically executable via LQR controller. [cite: 27, 28]
+2.  [cite_start]**Neural Rendering**: Converts scenarios into high-fidelity RGB video clips for realistic visual testing. [cite: 29, 30]
+3.  [cite_start]**Performance Testing & Scoring**: Clips are fed into four SOTA E2E AD models in an **open-loop setting**. [cite: 31]
 
-Evaluation code is released in the GitHub repository under the `SOP/` directory:  
-https://github.com/Arlo0o/UniScene-Unified-Occupancy-centric-Driving-Scene-Generation/tree/v2/SOP/monoscene#3-evaluation
-
-### 📝 Evaluation Guidelines
-- **Validation Phase:** Participants can evaluate on a public validation set via our evaluation script.
-- **Reproducibility:** Submitted code must include a README with training and inference instructions.
-- **Paper Submission:** Top-performing teams will be invited to submit a short paper (4–6 pages) to the WACV 2026 workshop proceedings.
+[cite_start]**Primary Metric:** **Average Collision Rate**. [cite: 32]
+[cite_start]**Ranking:** Contrary to standard benchmarks, **higher is better**. [cite: 33] [cite_start]A higher rate indicates a more successful adversarial scenario. [cite: 34]
 
 ---
 
 ## 🏆 **Baseline & Benchmark** {#baseline}
 
-We provide a reproduced baseline using **MonoScene** trained on **NuPlan-Occ miniset**:
+[cite_start]Initial testing shows significant performance degradation when models face adversarial scenarios (Adv-nuSc) compared to standard validation sets: [cite: 2]
 
-| Metric | Value |
-|---|---:|
-| Precision | 48.99 |
-| Recall | 42.54 |
-| IoU | 29.49 |
-| mIoU | 9.36 |
+| AD Model | nuScenes-val (Coll. Rate) | Adv-nuSc (Coll. Rate) | Degradation |
+| :--- | :--- | :--- | :--- |
+| **UniAD** | 0.29% | **3.95%** | 12.6× ↑ |
+| **VAD** | 0.26% | **7.05%** | 26.1× ↑ |
+| **SparseDrive** | 0.107% | **1.026%** | 8.6× ↑ |
+| **DiffusionDrive** | 0.099% | **1.671%** | 15.9× ↑ |
 
-**Per-class IoU:**  
-background: 29.0124, vehicle: 17.6694, bicycle: 0.4056, pedestrian: 6.4708, traffic_cone: 1.8878, barrier: 2.8173, czone_sign: 2.7924, generic_object: 13.8316
-
-**Baseline Code & Pretrained Model:**  
-Released in the GitHub repository under the `SOP/` directory.  
-https://github.com/Arlo0o/UniScene-Unified-Occupancy-centric-Driving-Scene-Generation/tree/v2/SOP/monoscene
+[cite_start]*(Data derived from Figure 1 performance table [cite: 2])*
 
 ---
 
 ## 🏅 **Awards & Recognition** {#awards}
 
-- 1st, 2nd, 3rd Place certificates and awards (sponsors TBD).
-- Best Paper Award for the most innovative method.
-- Top teams will be invited to present at the WACV 2026 workshop.
-- Results will be published on the challenge website.
+- [cite_start]**Win Big!** Awards for **1st, 2nd, and 3rd place** (Amounts [TBD]). [cite: 1]
+- [cite_start]Top teams will be recognized for helping the community identify and fix critical model weaknesses. [cite: 10]
 
 ---
 
 ## 📚 **Recommended Readings & Citations** {#citations}
 
-Participants are encouraged to cite the following works:
+[cite_start]Participants are encouraged to read and cite the following work: [cite: 36]
 
 ```bibtex
-@inproceedings{li2025uniscene,
-  title={Uniscene: Unified occupancy-centric driving scene generation},
-  author={Li, Bohan and Guo, Jiazhe and Liu, Hongsi and Zou, Yin...u and Tan, Feiyang and Zhang, Chi and Wang, Tiancai and others},
-  booktitle={Proceedings of the Computer Vision and Pattern Recognition Conference},
-  pages={11971--11981},
-  year={2025}
-}
-
-@article{li2025scaling,
-  title={Scaling Up Occupancy-centric Driving Scene Generation: Dataset and Method},
-  author={Li, Bohan and Jin, Xin and Zhu, Hu and Liu, Hongsi and... Kaiwen and Ma, Chao and Jin, Yueming and Zhao, Hao and others},
-  journal={arXiv preprint arXiv:2510.22973},
+@article{xu2025challenger,
+  title={Challenger: Affordable adversarial driving video generation},
+  author={Xu, Zhiyuan and Li, Bohan and Gao, Huan-ang and Gao, Mingju and Chen, Yong and Liu, Ming and Yan, Chenxu and Zhao, Hang and Feng, Shuo and Zhao, Hao},
+  journal={arXiv preprint arXiv:2505.15880},
   year={2025}
 }
