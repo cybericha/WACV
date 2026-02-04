@@ -5,7 +5,7 @@ theme: jekyll-theme-cayman
 
 markdown: kramdown
 
-baseurl: /WACV
+baseurl: /WACV_1
 
 # Remove `View on GitHub` & Download buttons
 show_downloads: false
