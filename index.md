@@ -12,7 +12,7 @@ description: Challenge SOTA E2E AD models by curating adversarial driving scenes
 {: .text-center}
 
 <div class="container">
-  <img class="rounded-rect" src="assets/imgs/AD0.PNG" alt="NuPlan-Occ overview figure"/>
+  <img class="rounded-rect" src="assets/imgs/AD0.jpg" alt="NuPlan-Occ overview figure"/>
 </div>
 {: .text-center}
 ---
